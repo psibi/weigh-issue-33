@@ -1,0 +1,50 @@
+name:                weigh-issue
+version:             0.1.0.0
+github:              "psibi/weigh-issue"
+license:             BSD3
+author:              "Sibi Prabakaran"
+maintainer:          "sibi@psibi.in"
+copyright:           "Sibi Prabakaran"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/psibi/weigh-issue#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  weigh-issue-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - weigh-issue
+    - weigh
+    - deepseq
+
+tests:
+  weigh-issue-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - weigh-issue
