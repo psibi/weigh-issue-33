@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 69308528ddd09b457cefa4eb88bd168008f14ac053f6ac5f4cb7d78824392e64
+-- hash: beb6afdb36197ced91f89fd370ccb94d97db22ab086b44b80c4c10d3794b1a67
 
 name:           weigh-issue
 version:        0.1.0.0
@@ -42,7 +42,6 @@ executable weigh-issue-exe
       Paths_weigh_issue
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
     , deepseq
